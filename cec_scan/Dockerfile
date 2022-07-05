@@ -8,7 +8,6 @@ RUN \
     apk add --no-cache \
         eudev-libs\
         p8-platform \
-        raspberrypi-dev \
         raspberrypi-libs \
     && apk add --no-cache --virtual .build-dependencies \
         build-base \
@@ -16,6 +15,7 @@ RUN \
         eudev-dev \
         git \
         p8-platform-dev \
+        raspberrypi-dev \
         swig \
         linux-headers \
     && git clone --depth 1 -b libcec-${LIBCEC_VERSION} \
@@ -29,8 +29,8 @@ RUN \
         .. \
     && make -j$(nproc) \
     && make install \
+    && cp /opt/vc/lib/*.so /usr/local/lib/ \
     && apk del --no-cache .build-dependencies \
-    && cp /opt/vc/lib/* /usr/local/lib/ \
     && rm -rf /usr/src/*
 
 # Copy data
