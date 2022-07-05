@@ -4,11 +4,8 @@ slug: cec_scan
 name: CEC Scanner (RPI3)
 url: https://github.com/b3er/hassio-addons/tree/master/cec_scan
 arch:
-  - armhf
   - armv7
   - aarch64
-  - amd64
-  - i386
 boot: manual
 description: Scan for HDMI CEC devices
 image: homeassistant/{arch}-addon-cec_scan
