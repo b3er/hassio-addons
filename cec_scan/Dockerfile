@@ -30,6 +30,7 @@ RUN \
     && make -j$(nproc) \
     && make install \
     && apk del --no-cache .build-dependencies \
+    && cp /opt/vc/lib/* /usr/local/lib/ \
     && rm -rf /usr/src/*
 
 # Copy data
