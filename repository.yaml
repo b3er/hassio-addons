@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Custom hassio addons repo for RPI3
+url: 'https://github.com/b3er/hassio-addons'
+maintainer: b3er <b3er@who.ms>
