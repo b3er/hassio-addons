@@ -8,7 +8,7 @@ arch:
   - aarch64
 boot: manual
 description: Scan for HDMI CEC devices
-image: homeassistant/{arch}-addon-cec_scan
+image: ghcr.io/b3er/{arch}-addon-cec_scan
 options: {}
 schema: {}
 startup: once
